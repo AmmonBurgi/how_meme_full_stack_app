@@ -81,12 +81,12 @@ class MemeForm extends Component {
                         value={this.state.curl}
                         className='url-input'
                     />
-                    {editing ? (
+                    {this.state.editing ? (
                         <button onClick={() => this.updateMeme(id, url, title)} className='add-edit-button'>Update Meme!</button>
                     ) : (
                         <button onClick={() => this.addMeme(url, title)} className='add-edit-button'>Add Meme!</button>
                     )}
-                </div
+                </div>
             </div>
         );
     }

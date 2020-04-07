@@ -32,6 +32,6 @@ module.exports = {
 		const db = req.app.get("db");
 		const { id } = req.params;
 
-		db.delete_meme(id).then(data => res.sendStatus(200));
+		db.delete_meme(id).then(data => res.status(200).send(data));
 	}
 };
